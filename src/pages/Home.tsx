@@ -7,28 +7,28 @@ import heroImage from "@/assets/hero-car.jpg";
 const Home = () => {
   const quickServices = [
     {
-      icon: Sparkles,
-      title: "Exterior Detailing",
-      description: "Complete exterior wash, polish, and protection",
-      priceRange: "$150 - $300",
-    },
-    {
-      icon: Droplet,
-      title: "Interior Deep Clean",
-      description: "Thorough cleaning and conditioning of all surfaces",
-      priceRange: "$120 - $250",
-    },
-    {
       icon: Shield,
-      title: "Ceramic Coating",
-      description: "Long-lasting paint protection with hydrophobic layer",
-      priceRange: "$600 - $1,500",
+      title: "Graphene & Ceramic Coating",
+      description: "Advanced protection with hydrophobic properties",
+      priceRange: "Premium",
+    },
+    {
+      icon: Sparkles,
+      title: "3M Polishing",
+      description: "Professional-grade paint correction",
+      priceRange: "Premium",
     },
     {
       icon: Zap,
-      title: "Paint Protection Film",
-      description: "Premium PPF installation for ultimate protection",
-      priceRange: "$1,200 - $3,000",
+      title: "PPF Coating",
+      description: "Self-healing paint protection film",
+      priceRange: "Premium",
+    },
+    {
+      icon: Droplet,
+      title: "Accessories & Seat Covers",
+      description: "Premium car & bike accessories",
+      priceRange: "Varies",
     },
   ];
 
@@ -47,11 +47,14 @@ const Home = () => {
 
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-poppins font-bold text-foreground mb-6 leading-tight">
-            Detailing That Defines{" "}
-            <span className="text-accent">Perfection</span>
+            Shine Beyond{" "}
+            <span className="text-accent">Factory Finish</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-montserrat mb-8">
-            Professional Detailing, Ceramic Coating & Paint Protection
+          <p className="text-xl md:text-2xl text-muted-foreground font-montserrat mb-4">
+            Professional Car & Bike Detailing Studio & Accessories Shop
+          </p>
+          <p className="text-lg text-muted-foreground font-montserrat mb-8">
+            Naduvannur, Calicut | Open 9:30 AM - 7:30 PM
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -67,7 +70,7 @@ const Home = () => {
               variant="outline"
               className="border-accent text-accent hover:bg-accent hover:text-primary-foreground font-poppins font-semibold text-lg transition-all duration-300"
             >
-              <Link to="/services">View Packages</Link>
+              <Link to="/services">View Services</Link>
             </Button>
           </div>
         </div>
@@ -85,10 +88,10 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-4">
-              Premium Services
+              Our Services
             </h2>
             <p className="text-muted-foreground font-montserrat text-lg max-w-2xl mx-auto">
-              Where every drive begins with a shine
+              Professional detailing and premium accessories for cars & bikes
             </p>
           </div>
 
@@ -121,23 +124,23 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-6">
-              Why Choose Gloss Garage?
+              Why Choose G4 Detailing Studio?
             </h2>
             <p className="text-muted-foreground font-montserrat text-lg mb-12">
-              We're passionate about automotive perfection. Every vehicle receives meticulous attention to detail, premium products, and professional care that exceeds expectations.
+              Located in Naduvannur, Calicut, we provide expert car & bike detailing with advanced coating technologies, professional polishing, and premium accessories. Every vehicle receives meticulous care.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="p-6">
-                <div className="text-5xl font-poppins font-bold text-accent mb-2">5+</div>
-                <p className="text-foreground font-montserrat">Years Experience</p>
+                <div className="text-5xl font-poppins font-bold text-accent mb-2">★★★★★</div>
+                <p className="text-foreground font-montserrat">Customer Rated</p>
               </div>
               <div className="p-6">
-                <div className="text-5xl font-poppins font-bold text-accent mb-2">500+</div>
+                <div className="text-5xl font-poppins font-bold text-accent mb-2">100+</div>
                 <p className="text-foreground font-montserrat">Happy Clients</p>
               </div>
               <div className="p-6">
-                <div className="text-5xl font-poppins font-bold text-accent mb-2">100%</div>
-                <p className="text-foreground font-montserrat">Satisfaction Rate</p>
+                <div className="text-5xl font-poppins font-bold text-accent mb-2">9:30-7:30</div>
+                <p className="text-foreground font-montserrat">Open Daily</p>
               </div>
             </div>
           </div>

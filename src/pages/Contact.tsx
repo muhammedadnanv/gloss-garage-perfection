@@ -58,11 +58,11 @@ const Contact = () => {
     
     // Create WhatsApp message
     const whatsappMessage = encodeURIComponent(
-      `New Booking Request:\n\nName: ${data.name}\nPhone: ${data.phone}\nCar Model: ${data.carModel}\nService: ${data.serviceType}\nPreferred Date: ${data.date}\n${data.message ? `Message: ${data.message}` : ''}`
+      `New Booking Request:\n\nName: ${data.name}\nPhone: ${data.phone}\nVehicle Model: ${data.carModel}\nService: ${data.serviceType}\nPreferred Date: ${data.date}\n${data.message ? `Message: ${data.message}` : ''}`
     );
     
-    // Open WhatsApp (replace with your business number)
-    window.open(`https://wa.me/1234567890?text=${whatsappMessage}`, '_blank');
+    // Open WhatsApp with G4 Detailing Studio number
+    window.open(`https://wa.me/917025346580?text=${whatsappMessage}`, '_blank');
     
     toast({
       title: "Booking Request Sent!",
@@ -77,17 +77,17 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Location",
-      content: "123 Premium Drive, Luxury District, City 12345",
+      content: "Near Register Office, Naduvannur, Calicut, Kerala, India",
     },
     {
       icon: Phone,
       title: "Phone",
-      content: "+1 (234) 567-8900",
+      content: "7025346580",
     },
     {
       icon: Mail,
-      title: "Email",
-      content: "info@glossgarage.com",
+      title: "Hours",
+      content: "9:30 AM - 7:30 PM (Daily)",
     },
   ];
 
@@ -97,10 +97,10 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6">
-            Book Your <span className="text-accent">Appointment</span>
+            Book Your <span className="text-accent">Service</span>
           </h1>
           <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
-            Schedule your detailing service today. We'll make your vehicle shine like never before.
+            Contact G4 Detailing Studio for car & bike detailing and premium accessories. We're here to help!
           </p>
         </div>
 
@@ -154,10 +154,10 @@ const Contact = () => {
                     name="carModel"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="font-montserrat">Car Model</FormLabel>
+                        <FormLabel className="font-montserrat">Vehicle Model</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="e.g., Mercedes-Benz S-Class"
+                            placeholder="e.g., Honda City / Royal Enfield Classic"
                             className="bg-background border-border font-montserrat"
                             {...field}
                           />
@@ -180,12 +180,12 @@ const Contact = () => {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="exterior">Exterior Detailing</SelectItem>
-                            <SelectItem value="interior">Interior Deep Cleaning</SelectItem>
-                            <SelectItem value="ceramic">Ceramic Coating</SelectItem>
-                            <SelectItem value="ppf">Paint Protection Film</SelectItem>
-                            <SelectItem value="headlight">Headlight Restoration</SelectItem>
-                            <SelectItem value="full">Full Detailing Package</SelectItem>
+                            <SelectItem value="graphene">Graphene & Ceramic Coating</SelectItem>
+                            <SelectItem value="3m-polish">3M Polishing</SelectItem>
+                            <SelectItem value="ppf">PPF Coating</SelectItem>
+                            <SelectItem value="seat-covers">Premium Seat Covers</SelectItem>
+                            <SelectItem value="accessories">Car & Bike Accessories</SelectItem>
+                            <SelectItem value="stickers">Custom Sticker Works</SelectItem>
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -265,7 +265,7 @@ const Contact = () => {
 
             {/* WhatsApp Button */}
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/917025346580"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl transition-all duration-300 shadow-premium hover:shadow-glow"
@@ -277,14 +277,14 @@ const Contact = () => {
             {/* Map Placeholder */}
             <div className="bg-card border border-border rounded-xl overflow-hidden h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977203234783!2d-122.41941492346655!3d37.77492771267007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1692829291840!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.0!2d75.75!3d11.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDM5JzAwLjAiTiA3NcKwNDUnMDAuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Gloss Garage Location"
+                title="G4 Detailing Studio Location - Naduvannur, Calicut"
               />
             </div>
           </div>

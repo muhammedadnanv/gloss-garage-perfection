@@ -26,10 +26,10 @@ const About = () => {
   ];
 
   const certifications = [
-    "IDA Certified Detailers",
-    "Ceramic Pro Certified Installers",
-    "XPEL Paint Protection Film",
-    "3M Authorized Dealer",
+    "Professional Certified Team",
+    "Graphene & Ceramic Expertise",
+    "3M Authorized Polishing",
+    "Premium Accessories Store",
   ];
 
   return (
@@ -38,10 +38,10 @@ const About = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6">
-            About <span className="text-accent">Gloss Garage</span>
+            About <span className="text-accent">G4 Detailing Studio</span>
           </h1>
           <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
-            Where passion meets precision in automotive care
+            Your trusted destination for premium car & bike detailing and accessories in Calicut
           </p>
         </div>
 
@@ -52,13 +52,13 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-muted-foreground font-montserrat text-lg mb-4">
-              Founded in 2019, Gloss Garage began with a simple mission: to redefine automotive detailing through uncompromising quality and passionate craftsmanship.
+              Located in Naduvannur, Calicut, G4 Detailing Studio is your one-stop destination for professional car and bike detailing combined with a premium accessories shop. We specialize in advanced coating technologies, precision polishing, and custom styling solutions.
             </p>
             <p className="text-muted-foreground font-montserrat text-lg mb-4">
-              What started as a small operation has grown into a premier detailing studio, trusted by luxury car owners and automotive enthusiasts across the region.
+              Our team brings expertise in graphene and ceramic coating, 3M polishing techniques, PPF installation, and custom vinyl work. We're committed to delivering results that go beyond factory finish, ensuring your vehicle looks showroom-ready every day.
             </p>
             <p className="text-muted-foreground font-montserrat text-lg">
-              Today, we combine cutting-edge technology with traditional hand-finishing techniques to deliver results that exceed expectations. Every vehicle that leaves our studio is a testament to our commitment to excellence.
+              Whether you need advanced paint protection, interior enhancement, or premium accessories, G4 Detailing Studio combines quality products, skilled craftsmanship, and customer satisfaction in every service we provide.
             </p>
           </div>
           <div className="animate-slide-in-right">
@@ -115,16 +115,16 @@ const About = () => {
         {/* CTA Section */}
         <div className="text-center mt-16">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground mb-4">
-            Experience the Difference
+            Visit Us Today
           </h2>
           <p className="text-muted-foreground font-montserrat text-lg mb-8 max-w-2xl mx-auto">
-            Join hundreds of satisfied clients who trust Gloss Garage with their prized vehicles.
+            Experience premium car & bike detailing and explore our accessories shop near Register Office, Naduvannur, Calicut.
           </p>
           <a
             href="/contact"
             className="inline-block bg-gradient-accent text-primary-foreground px-8 py-4 rounded-lg font-poppins font-semibold hover:shadow-glow transition-all duration-300"
           >
-            Book Your Appointment
+            Contact Us Now
           </a>
         </div>
       </div>

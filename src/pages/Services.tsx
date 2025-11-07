@@ -4,40 +4,40 @@ import ServiceCard from "@/components/ServiceCard";
 const Services = () => {
   const services = [
     {
-      icon: Sparkles,
-      title: "Exterior Detailing",
-      description: "Complete exterior wash, clay bar treatment, machine polish, and wax protection. Includes wheels, tires, and trim restoration.",
-      priceRange: "$150 - $300",
-    },
-    {
-      icon: Droplet,
-      title: "Interior Deep Cleaning",
-      description: "Vacuum, steam cleaning, leather conditioning, stain removal, and odor elimination. Every surface meticulously cleaned.",
-      priceRange: "$120 - $250",
-    },
-    {
       icon: Shield,
-      title: "Ceramic Coating",
-      description: "Professional-grade ceramic coating application providing years of protection with extreme hydrophobic properties.",
-      priceRange: "$600 - $1,500",
+      title: "Graphene & Ceramic Coating",
+      description: "Advanced nano-coating technology providing superior hydrophobic protection, UV resistance, and long-lasting shine for both cars and bikes.",
+      priceRange: "Contact for Quote",
+    },
+    {
+      icon: Sparkles,
+      title: "3M Polishing",
+      description: "Professional-grade 3M compound polishing to remove scratches, swirl marks, and oxidation. Restores original paint depth and gloss.",
+      priceRange: "Contact for Quote",
     },
     {
       icon: Zap,
-      title: "Paint Protection Film (PPF)",
-      description: "Self-healing clear film installation protecting your vehicle from rock chips, scratches, and environmental damage.",
-      priceRange: "$1,200 - $3,000",
-    },
-    {
-      icon: Eye,
-      title: "Headlight Restoration",
-      description: "Professional headlight polishing and UV protection, restoring clarity and improving nighttime visibility.",
-      priceRange: "$80 - $150",
+      title: "PPF Coating",
+      description: "Premium Paint Protection Film installation with self-healing properties. Protects against rock chips, scratches, and environmental damage.",
+      priceRange: "Contact for Quote",
     },
     {
       icon: Car,
-      title: "Full Detailing Package",
-      description: "Complete interior and exterior detailing package. The ultimate treatment for your vehicle inside and out.",
-      priceRange: "$350 - $600",
+      title: "Premium Seat Covers",
+      description: "Custom-fit premium seat covers in various materials and designs. Protects original upholstery while adding luxury and comfort.",
+      priceRange: "Contact for Quote",
+    },
+    {
+      icon: Droplet,
+      title: "Car & Bike Accessories",
+      description: "Wide range of premium accessories including mats, perfumes, cleaning products, LED lights, and performance upgrades.",
+      priceRange: "Shop Visit",
+    },
+    {
+      icon: Eye,
+      title: "Custom Sticker Works",
+      description: "Professional vinyl wrapping and custom sticker application. From racing stripes to full body graphics for personalized styling.",
+      priceRange: "Contact for Quote",
     },
   ];
 
@@ -50,7 +50,7 @@ const Services = () => {
             Our <span className="text-accent">Services</span>
           </h1>
           <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
-            Professional automotive care tailored to your vehicle's needs. From basic detailing to advanced protection, we deliver excellence in every service.
+            Professional car and bike detailing with premium accessories. From graphene coating to custom stickers, we deliver excellence in every service.
           </p>
         </div>
 
@@ -70,16 +70,16 @@ const Services = () => {
         {/* CTA Section */}
         <div className="bg-gradient-premium rounded-2xl p-12 text-center border border-border">
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground mb-4">
-            Not Sure Which Service You Need?
+            Visit Our Studio or Call Us
           </h2>
           <p className="text-muted-foreground font-montserrat text-lg mb-8 max-w-2xl mx-auto">
-            Contact us for a free consultation. We'll assess your vehicle and recommend the perfect detailing package.
+            Located near Register Office, Naduvannur, Calicut. Open 9:30 AM to 7:30 PM. Contact us for quotes and bookings.
           </p>
           <a
             href="/contact"
             className="inline-block bg-gradient-accent text-primary-foreground px-8 py-4 rounded-lg font-poppins font-semibold hover:shadow-glow transition-all duration-300"
           >
-            Get Free Consultation
+            Contact Us Now
           </a>
         </div>
       </div>

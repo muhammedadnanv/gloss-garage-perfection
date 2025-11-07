@@ -35,11 +35,11 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
             <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-glow">
-              <span className="text-2xl font-poppins font-bold text-primary-foreground">GG</span>
+              <span className="text-2xl font-poppins font-bold text-primary-foreground">G4</span>
             </div>
             <div className="hidden md:block">
-              <h1 className="text-xl font-poppins font-bold text-foreground">Gloss Garage</h1>
-              <p className="text-xs text-muted-foreground font-montserrat">Detailing Studio</p>
+              <h1 className="text-xl font-poppins font-bold text-foreground">G4 Detailing</h1>
+              <p className="text-xs text-muted-foreground font-montserrat">Car & Bike Studio</p>
             </div>
           </Link>
 
