@@ -1,0 +1,297 @@
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+const bookingSchema = z.object({
+  name: z.string().trim().min(2, "Name must be at least 2 characters").max(100),
+  phone: z.string().trim().min(10, "Please enter a valid phone number").max(20),
+  carModel: z.string().trim().min(2, "Please enter your car model").max(100),
+  serviceType: z.string().min(1, "Please select a service"),
+  date: z.string().min(1, "Please select a date"),
+  message: z.string().trim().max(500).optional(),
+});
+
+type BookingFormValues = z.infer<typeof bookingSchema>;
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const form = useForm<BookingFormValues>({
+    resolver: zodResolver(bookingSchema),
+    defaultValues: {
+      name: "",
+      phone: "",
+      carModel: "",
+      serviceType: "",
+      date: "",
+      message: "",
+    },
+  });
+
+  const onSubmit = async (data: BookingFormValues) => {
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    // Create WhatsApp message
+    const whatsappMessage = encodeURIComponent(
+      `New Booking Request:\n\nName: ${data.name}\nPhone: ${data.phone}\nCar Model: ${data.carModel}\nService: ${data.serviceType}\nPreferred Date: ${data.date}\n${data.message ? `Message: ${data.message}` : ''}`
+    );
+    
+    // Open WhatsApp (replace with your business number)
+    window.open(`https://wa.me/1234567890?text=${whatsappMessage}`, '_blank');
+    
+    toast({
+      title: "Booking Request Sent!",
+      description: "We'll contact you shortly to confirm your appointment.",
+    });
+    
+    form.reset();
+    setIsSubmitting(false);
+  };
+
+  const contactInfo = [
+    {
+      icon: MapPin,
+      title: "Location",
+      content: "123 Premium Drive, Luxury District, City 12345",
+    },
+    {
+      icon: Phone,
+      title: "Phone",
+      content: "+1 (234) 567-8900",
+    },
+    {
+      icon: Mail,
+      title: "Email",
+      content: "info@glossgarage.com",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen pt-32 pb-20">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16 animate-fade-in">
+          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6">
+            Book Your <span className="text-accent">Appointment</span>
+          </h1>
+          <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
+            Schedule your detailing service today. We'll make your vehicle shine like never before.
+          </p>
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          {/* Contact Form */}
+          <div className="animate-fade-in">
+            <div className="bg-card border border-border rounded-2xl p-8">
+              <h2 className="text-2xl font-poppins font-bold text-foreground mb-6">
+                Booking Form
+              </h2>
+              <Form {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Full Name</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="John Doe"
+                            className="bg-background border-border font-montserrat"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Phone Number</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="+1 (234) 567-8900"
+                            className="bg-background border-border font-montserrat"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="carModel"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Car Model</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="e.g., Mercedes-Benz S-Class"
+                            className="bg-background border-border font-montserrat"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="serviceType"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Service Type</FormLabel>
+                        <Select onValueChange={field.onChange} defaultValue={field.value}>
+                          <FormControl>
+                            <SelectTrigger className="bg-background border-border font-montserrat">
+                              <SelectValue placeholder="Select a service" />
+                            </SelectTrigger>
+                          </FormControl>
+                          <SelectContent>
+                            <SelectItem value="exterior">Exterior Detailing</SelectItem>
+                            <SelectItem value="interior">Interior Deep Cleaning</SelectItem>
+                            <SelectItem value="ceramic">Ceramic Coating</SelectItem>
+                            <SelectItem value="ppf">Paint Protection Film</SelectItem>
+                            <SelectItem value="headlight">Headlight Restoration</SelectItem>
+                            <SelectItem value="full">Full Detailing Package</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="date"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Preferred Date</FormLabel>
+                        <FormControl>
+                          <Input
+                            type="date"
+                            className="bg-background border-border font-montserrat"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="message"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="font-montserrat">Additional Notes (Optional)</FormLabel>
+                        <FormControl>
+                          <Textarea
+                            placeholder="Any special requests or concerns?"
+                            className="bg-background border-border font-montserrat resize-none"
+                            rows={4}
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-accent font-poppins font-semibold text-lg hover:shadow-glow transition-all duration-300"
+                  >
+                    {isSubmitting ? "Sending..." : "Book Appointment"}
+                  </Button>
+                </form>
+              </Form>
+            </div>
+          </div>
+
+          {/* Contact Info & Map */}
+          <div className="space-y-8 animate-slide-in-right">
+            {/* Contact Info Cards */}
+            {contactInfo.map((info, index) => (
+              <div
+                key={info.title}
+                className="bg-card border border-border rounded-xl p-6 flex items-start space-x-4 hover:border-accent transition-all duration-300"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="w-12 h-12 bg-gradient-shine rounded-lg flex items-center justify-center flex-shrink-0">
+                  <info.icon className="text-accent" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-poppins font-bold text-foreground mb-1">
+                    {info.title}
+                  </h3>
+                  <p className="text-muted-foreground font-montserrat">{info.content}</p>
+                </div>
+              </div>
+            ))}
+
+            {/* WhatsApp Button */}
+            <a
+              href="https://wa.me/1234567890"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center space-x-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-xl transition-all duration-300 shadow-premium hover:shadow-glow"
+            >
+              <MessageCircle size={24} />
+              <span className="font-poppins font-semibold">Chat on WhatsApp</span>
+            </a>
+
+            {/* Map Placeholder */}
+            <div className="bg-card border border-border rounded-xl overflow-hidden h-64">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0977203234783!2d-122.41941492346655!3d37.77492771267007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050fa5!2sTwitter%20HQ!5e0!3m2!1sen!2sus!4v1692829291840!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Gloss Garage Location"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
