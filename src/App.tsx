@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
-import FloatingBookButton from "./components/FloatingBookButton";
+import WhatsAppFormWidget from "./components/WhatsAppFormWidget";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
@@ -22,7 +22,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Navigation />
-        <FloatingBookButton />
+        <WhatsAppFormWidget />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
