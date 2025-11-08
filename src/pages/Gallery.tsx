@@ -64,20 +64,20 @@ const Gallery = () => {
       : galleryItems.filter((item) => item.category === activeFilter);
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6">
+        <div className="text-center mb-8 sm:mb-10 lg:mb-12 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-foreground mb-4 sm:mb-6">
             Our <span className="text-accent">Work</span>
           </h1>
-          <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg max-w-3xl mx-auto px-4">
             See the transformation. Every detail matters, every finish is perfection.
           </p>
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 lg:gap-4 mb-8 sm:mb-10 lg:mb-12 px-2">
           {filters.map((filter) => (
             <Button
               key={filter.id}
@@ -121,12 +121,12 @@ const Gallery = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center mt-16">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground mb-4">
+        <div className="text-center mt-12 sm:mt-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold text-foreground mb-3 sm:mb-4">
             Ready for Your Transformation?
           </h2>
-          <p className="text-muted-foreground font-montserrat text-lg mb-8 max-w-2xl mx-auto">
-            Book your appointment today and experience the Gloss Garage difference.
+          <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            Book your appointment today and experience the G4 Detailing Studio difference.
           </p>
           <Button
             asChild

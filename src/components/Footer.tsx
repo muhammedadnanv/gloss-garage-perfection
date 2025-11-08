@@ -24,8 +24,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-gradient-to-b from-background to-muted/20 border-t border-border/50">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           {/* Logo and About */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
@@ -105,8 +105,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-border/50">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-6 sm:pt-8 border-t border-border/50">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
             <p className="text-muted-foreground font-montserrat text-sm text-center md:text-left">
               © {currentYear} G4 Detailing Studio. All rights reserved.
             </p>

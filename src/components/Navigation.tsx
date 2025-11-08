@@ -31,14 +31,14 @@ const Navigation = () => {
         isScrolled ? "bg-background/95 backdrop-blur-lg shadow-premium" : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img 
               src={g4Logo} 
               alt="G4 Detailing Studio" 
-              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="h-10 sm:h-12 lg:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
             />
           </Link>
 
@@ -74,8 +74,8 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-6 animate-fade-in">
-            <div className="flex flex-col space-y-4">
+          <div className="lg:hidden pb-6 animate-fade-in bg-background/95 backdrop-blur-lg">
+            <div className="flex flex-col space-y-3">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}

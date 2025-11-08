@@ -42,14 +42,14 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16 animate-fade-in">
-          <h1 className="text-5xl md:text-6xl font-poppins font-bold text-foreground mb-6">
+        <div className="text-center mb-10 sm:mb-12 lg:mb-16 animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-poppins font-bold text-foreground mb-4 sm:mb-6">
             Our <span className="text-accent">Services</span>
           </h1>
-          <p className="text-muted-foreground font-montserrat text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg max-w-3xl mx-auto px-4">
             Professional car and bike detailing with premium accessories. From graphene coating to custom stickers, we deliver excellence in every service.
           </p>
         </div>
@@ -68,11 +68,11 @@ const Services = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-premium rounded-2xl p-12 text-center border border-border">
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-foreground mb-4">
+        <div className="bg-gradient-premium rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-12 text-center border border-border">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-poppins font-bold text-foreground mb-3 sm:mb-4">
             Visit Our Studio or Call Us
           </h2>
-          <p className="text-muted-foreground font-montserrat text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
             Located near Register Office, Naduvannur, Calicut. Open 9:30 AM to 7:30 PM. Contact us for quotes and bookings.
           </p>
           <a

@@ -28,14 +28,14 @@ const WhatsAppFormWidget = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-5 right-5 w-[60px] h-[60px] bg-accent rounded-full flex items-center justify-center shadow-glow hover:scale-105 transition-all duration-300 z-[1000]"
+        className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 w-[56px] h-[56px] sm:w-[60px] sm:h-[60px] bg-accent rounded-full flex items-center justify-center shadow-glow hover:scale-105 transition-all duration-300 z-[1000]"
         aria-label="Open WhatsApp form"
       >
-        <MessageCircle className="w-7 h-7 text-white" />
+        <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-[90px] right-5 w-[400px] max-w-[90vw] bg-white rounded-xl shadow-premium z-[999] overflow-hidden border border-border animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-[75px] right-4 sm:bottom-[90px] sm:right-5 w-[calc(100vw-2rem)] sm:w-[400px] max-w-[90vw] bg-white rounded-xl shadow-premium z-[999] overflow-hidden border border-border animate-in fade-in slide-in-from-bottom-4 duration-300">
           <div className="bg-muted/20 p-3 flex items-center justify-between border-b border-border">
             <h3 className="text-sm font-semibold text-gray-900">Contact Us</h3>
             <button
@@ -47,25 +47,25 @@ const WhatsAppFormWidget = () => {
             </button>
           </div>
 
-          <div className="p-5">
-            <p className="text-sm text-gray-600 text-center mb-5 leading-relaxed">
+          <div className="p-4 sm:p-5">
+            <p className="text-xs sm:text-sm text-gray-600 text-center mb-4 sm:mb-5 leading-relaxed">
               Fill out the form below and we'll get back to you on WhatsApp!
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-3">
+            <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-3">
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
                 required
-                className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20"
+                className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
 
               <input
                 type="tel"
                 name="phone"
                 placeholder="Your Phone Number"
-                className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20"
+                className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
 
               <textarea
@@ -73,12 +73,12 @@ const WhatsAppFormWidget = () => {
                 placeholder="Your Message"
                 required
                 rows={4}
-                className="w-full px-3 py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20 resize-vertical min-h-[80px]"
+                className="w-full px-3 py-2.5 sm:py-3 border border-gray-300 rounded-lg text-sm outline-none transition-all focus:border-accent focus:ring-2 focus:ring-accent/20 resize-vertical min-h-[80px]"
               />
 
               <button
                 type="submit"
-                className="w-full py-3.5 bg-accent text-white font-semibold rounded-lg hover:-translate-y-0.5 hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full py-3 sm:py-3.5 bg-accent text-white font-semibold text-sm sm:text-base rounded-lg hover:-translate-y-0.5 hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 Send via WhatsApp

@@ -45,15 +45,15 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background"></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 max-w-4xl mx-auto animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-poppins font-bold text-foreground mb-6 leading-tight">
+        <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl mx-auto animate-fade-in">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-poppins font-bold text-foreground mb-4 sm:mb-6 leading-tight">
             Shine Beyond{" "}
             <span className="text-accent">Factory Finish</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground font-montserrat mb-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-montserrat mb-3 sm:mb-4 px-2">
             Professional Car & Bike Detailing Studio & Accessories Shop
           </p>
-          <p className="text-lg text-muted-foreground font-montserrat mb-8">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground font-montserrat mb-6 sm:mb-8">
             Naduvannur, Calicut | Open 9:30 AM - 7:30 PM
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -84,13 +84,13 @@ const Home = () => {
       </section>
 
       {/* Quick Services Section */}
-      <section className="py-20 bg-gradient-premium">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-premium">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-foreground mb-3 sm:mb-4">
               Our Services
             </h2>
-            <p className="text-muted-foreground font-montserrat text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg max-w-2xl mx-auto px-4">
               Professional detailing and premium accessories for cars & bikes
             </p>
           </div>
@@ -120,16 +120,16 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      <section className="py-12 sm:py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-poppins font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold text-foreground mb-4 sm:mb-6">
               Why Choose G4 Detailing Studio?
             </h2>
-            <p className="text-muted-foreground font-montserrat text-lg mb-12">
+            <p className="text-muted-foreground font-montserrat text-sm sm:text-base lg:text-lg mb-8 sm:mb-12 px-4">
               Located in Naduvannur, Calicut, we provide expert car & bike detailing with advanced coating technologies, professional polishing, and premium accessories. Every vehicle receives meticulous care.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
               <div className="p-6">
                 <div className="text-5xl font-poppins font-bold text-accent mb-2">★★★★★</div>
                 <p className="text-foreground font-montserrat">Customer Rated</p>
