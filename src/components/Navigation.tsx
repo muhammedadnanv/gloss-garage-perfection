@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import g4Logo from "@/assets/g4-logo.jpg";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,14 +34,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center shadow-glow">
-              <span className="text-2xl font-poppins font-bold text-primary-foreground">G4</span>
-            </div>
-            <div className="hidden md:block">
-              <h1 className="text-xl font-poppins font-bold text-foreground">G4 Detailing</h1>
-              <p className="text-xs text-muted-foreground font-montserrat">Car & Bike Studio</p>
-            </div>
+          <Link to="/" className="flex items-center group">
+            <img 
+              src={g4Logo} 
+              alt="G4 Detailing Studio" 
+              className="h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
